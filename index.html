@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Poddar | Technology Leader | AI & Cloud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1a2a6c;
-            --secondary-color: #b21f1f;
-            --accent-color: #fdbb2d;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
+            --primary-color: #0f172a;
+            --secondary-color: #2563eb;
+            --accent-color: #38bdf8;
+            --text-color: #1e293b;
+            --light-bg: #f8fafc;
             --white: #ffffff;
-            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --glass: rgba(255, 255, 255, 0.8);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
         }
 
         * {
@@ -22,199 +25,241 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
             color: var(--text-color);
-            background-color: #eef2f3;
-            padding-bottom: 50px;
+            background-color: #f1f5f9;
+            padding-bottom: 80px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 30px;
         }
 
+        /* Hero Header Section */
         header {
-            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
-            padding: 60px 0;
-            text-align: center;
-            border-bottom-left-radius: 50% 20px;
-            border-bottom-right-radius: 50% 20px;
-            box-shadow: var(--shadow);
-            margin-bottom: 40px;
+            padding: 80px 0;
+            margin-bottom: -60px; /* Overlap with content */
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .contact-info {
-            margin-top: 25px;
+        .header-content {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
+        }
+
+        .profile-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 24px; /* Squircle style */
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.2);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .header-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-text p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-bar {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
-        .contact-info a {
-            color: white;
+        .contact-link {
             text-decoration: none;
-            background: rgba(255,255,255,0.1);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            font-size: 0.85rem;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .contact-info a:hover {
-            background: rgba(255,255,255,0.3);
+        .contact-link:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: var(--accent-color);
             transform: translateY(-2px);
         }
 
+        /* Sections Styling */
         section {
             background: var(--white);
-            padding: 40px;
+            padding: 50px;
             margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            position: relative;
+            overflow: hidden;
         }
 
         h2 {
             color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            border-left: 5px solid var(--secondary-color);
-            padding-left: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        h3 {
-            color: #444;
-            margin-bottom: 10px;
-        }
-
-        .job-header {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
             display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 5px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+        }
+
+        h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        /* Experience Cards */
+        .experience-item {
+            margin-bottom: 40px;
+            padding-left: 20px;
+            border-left: 3px solid #e2e8f0;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 13px;
+            height: 13px;
+            background: var(--white);
+            border: 3px solid var(--secondary-color);
+            border-radius: 50%;
         }
 
         .job-title {
             font-weight: 700;
             color: var(--primary-color);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
 
-        .job-date {
-            font-style: italic;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .job-company {
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        ul li {
-            position: relative;
-            padding-left: 25px;
+        .company-meta {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 12px;
+            font-size: 0.95rem;
         }
 
-        ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
+        .company-name {
             color: var(--secondary-color);
-            font-weight: bold;
+            font-weight: 600;
         }
 
-        .expertise-grid {
+        .job-duration {
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
-        .expertise-item {
+        .card-light {
             background: var(--light-bg);
-            padding: 15px;
-            border-radius: 8px;
-            border-top: 3px solid var(--accent-color);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid #f1f5f9;
         }
 
-        .expertise-item strong {
+        .skill-group {
+            margin-bottom: 20px;
+        }
+
+        .skill-group strong {
             display: block;
-            margin-bottom: 8px;
-            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
         }
 
-        .skill-tags {
+        .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
 
         .tag {
-            background: #e9ecef;
-            color: #495057;
-            padding: 4px 10px;
-            border-radius: 4px;
+            background: white;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 6px;
             font-size: 0.85rem;
-            border: 1px solid #dee2e6;
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #e2e8f0;
         }
 
         .edu-item {
             margin-bottom: 20px;
         }
 
-        .cert-list {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+        .edu-item strong {
+            display: block;
+            color: var(--primary-color);
+            font-size: 1.05rem;
         }
 
-        .cert-item {
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
-            color: #856404;
-            padding: 10px 15px;
-            border-radius: 8px;
+        .edu-meta {
+            color: #64748b;
             font-size: 0.9rem;
-            font-weight: 600;
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            color: #666;
+            padding-top: 40px;
+            color: #64748b;
             font-size: 0.9rem;
         }
 
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            section { padding: 20px; }
-            .job-header { flex-direction: column; }
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; text-align: center; }
+            .header-text h1 { font-size: 2.5rem; }
+            .contact-bar { justify-content: center; }
+            section { padding: 30px; }
         }
     </style>
 </head>
@@ -222,180 +267,156 @@
 
 <header>
     <div class="container">
-        <img src="profile.jpg" alt="Abhishek Poddar" class="profile-img">
-        <h1>Abhishek Poddar</h1>
-        <p>Technology Leader | 17+ Years Experience | AI & Cloud Program Delivery</p>
-        <div class="contact-info">
-            <a href="mailto:abhishek.poddar.2004@gmail.com">Email</a>
-            <a href="tel:+919916135106">+91-9916135106</a>
-            <a href="https://linkedin.com/in/abhishekpoddar26" target="_blank">LinkedIn</a>
-            <a href="https://github.com/abhishekpoddar26" target="_blank">GitHub</a>
+        <div class="header-content">
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Abhishek Poddar" class="profile-img">
+            </div>
+            <div class="header-text">
+                <h1>Abhishek Poddar</h1>
+                <p>Technology Leader | 17+ Years in AI & Cloud</p>
+                <div class="contact-bar">
+                    <a href="mailto:abhishek.poddar.2004@gmail.com" class="contact-link">Email</a>
+                    <a href="tel:+919916135106" class="contact-link">+91 99161 35106</a>
+                    <a href="https://linkedin.com/in/abhishekpoddar26" target="_blank" class="contact-link">LinkedIn</a>
+                    <a href="https://github.com/abhishekpoddar26" target="_blank" class="contact-link">GitHub</a>
+                </div>
+            </div>
         </div>
     </div>
 </header>
 
-<div class="container">
-    <section id="profile">
+<div class="container" style="position: relative; z-index: 10;">
+    <section id="summary">
         <h2>Professional Profile</h2>
-        <ul>
-            <li>Orchestrated AI and <strong>cloud program delivery</strong> with 17+ years’ expertise, generating multi-million dollar revenue and pioneering scalable <strong>AI-powered platforms</strong>.</li>
-            <li>Engineered multi-cloud migration using <strong>AWS, Azure, and GCP</strong> via Concierto Migrate, accelerating modernization by 80%.</li>
-            <li>Galvanized <strong>€2.4M toolchain platform</strong> managing 70+ engineers and 60+ modules globally with Agile and Jira.</li>
-            <li>Innovated AI-driven modernization platforms leveraging <strong>Python, LLMs (GPT, Claude, Mistral)</strong>, and Docker, reducing costs by 60%.</li>
-            <li>Spearheaded scalable ETL pipelines and analytics with <strong>Python, AWS AppFlow, Athena, and QuickSight</strong>.</li>
-        </ul>
+        <p style="font-size: 1.1rem; color: #475569;">
+            Orchestrated AI and <strong>cloud program delivery</strong> with 17+ years’ expertise, generating multi-million dollar revenue and pioneering scalable <strong>AI-powered platforms</strong>. Expert in multi-cloud migration (AWS, Azure, GCP) and leading large global engineering teams to deliver high-impact modernization solutions.
+        </p>
     </section>
 
-    <section id="expertise">
-        <h2>Expertise</h2>
-        <div class="expertise-grid">
-            <div class="expertise-item">
+    <div class="grid-2">
+        <section id="expertise">
+            <h2>Technical Expertise</h2>
+            <div class="skill-group">
                 <strong>AI/ML & LLMs</strong>
-                <div class="skill-tags">
-                    <span class="tag">Generative AI</span>
-                    <span class="tag">GPT</span>
-                    <span class="tag">Claude</span>
-                    <span class="tag">Mistral</span>
-                    <span class="tag">Agentic AI</span>
+                <div class="tags">
+                    <span class="tag">Generative AI</span> <span class="tag">LLM Orchestration</span>
+                    <span class="tag">Agentic Systems</span> <span class="tag">TensorFlow</span>
                 </div>
             </div>
-            <div class="expertise-item">
-                <strong>Cloud</strong>
-                <div class="skill-tags">
-                    <span class="tag">AWS (Athena, AppFlow)</span>
-                    <span class="tag">Azure</span>
-                    <span class="tag">GCP</span>
+            <div class="skill-group">
+                <strong>Cloud & Architecture</strong>
+                <div class="tags">
+                    <span class="tag">AWS / Azure / GCP</span> <span class="tag">Microservices</span>
+                    <span class="tag">Data Lake</span> <span class="tag">Distributed Systems</span>
                 </div>
             </div>
-            <div class="expertise-item">
-                <strong>Architecture</strong>
-                <div class="skill-tags">
-                    <span class="tag">Microservices</span>
-                    <span class="tag">Distributed Systems</span>
-                    <span class="tag">Data Lake</span>
+        </section>
+
+        <section id="skills">
+            <h2>Core Leadership</h2>
+            <div class="skill-group">
+                <strong>Strategic Management</strong>
+                <div class="tags">
+                    <span class="tag">Program Delivery</span> <span class="tag">Revenue Growth</span>
+                    <span class="tag">Stakeholder Management</span> <span class="tag">Agile/Scrum</span>
                 </div>
             </div>
-            <div class="expertise-item">
-                <strong>Leadership</strong>
-                <div class="skill-tags">
-                    <span class="tag">Program Management</span>
-                    <span class="tag">Agile</span>
-                    <span class="tag">CI/CD</span>
+            <div class="skill-group">
+                <strong>Engineering</strong>
+                <div class="tags">
+                    <span class="tag">Python</span> <span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span> <span class="tag">CI/CD Pipelines</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section id="experience">
-        <h2>Work Experience</h2>
+        <h2>Professional Journey</h2>
         
-        <div class="job">
-            <div class="job-header">
-                <span class="job-title">Software Development Manager (Technology Lead – AI & Cloud)</span>
-                <span class="job-date">July 2022 – Present</span>
+        <div class="experience-item">
+            <div class="job-title">Software Development Manager (Technology Lead – AI & Cloud)</div>
+            <div class="company-meta">
+                <span class="company-name">Trianz Digital Consulting</span>
+                <span class="job-duration">July 2022 – Present</span>
             </div>
-            <span class="job-company">Trianz Digital Consulting</span>
-            <ul>
-                <li>Spearheaded end-to-end delivery for cloud/data transformation programs, generating <strong>$4M+ revenue</strong>.</li>
-                <li>Co-developed AWS AppFlow, Athena, and QuickSight connectors for scalable ETL pipelines.</li>
-                <li>Architected multi-cloud migration platform via Concierto Migrate, streamlining workflows.</li>
-                <li>Directed global engineering team of <strong>40+ across DevOps</strong>, architecture, and development.</li>
-                <li>Enabled AI-driven automation via agentic workflows and LLM orchestration using Python and Docker.</li>
+            <ul style="list-style: square; padding-left: 20px; color: #475569;">
+                <li>Spearheaded cloud/data transformation programs generating <strong>$4M+ revenue</strong>.</li>
+                <li>Architected multi-cloud migration platform via Concierto Migrate.</li>
+                <li>Enabled AI-driven automation via agentic workflows and LLM orchestration.</li>
+                <li>Directing global engineering team of 40+ across DevOps and Architecture.</li>
             </ul>
         </div>
 
-        <div class="job" style="margin-top: 30px;">
-            <div class="job-header">
-                <span class="job-title">Technical Program Manager</span>
-                <span class="job-date">May 2015 – June 2022</span>
+        <div class="experience-item">
+            <div class="job-title">Technical Program Manager</div>
+            <div class="company-meta">
+                <span class="company-name">Mercedes-Benz R&D India</span>
+                <span class="job-duration">May 2015 – June 2022</span>
             </div>
-            <span class="job-company">Mercedes-Benz R&D India</span>
-            <ul>
-                <li>Directed delivery of <strong>€2.4M toolchain platform</strong> managing 60+ modules and 70+ engineers.</li>
-                <li>Integrated Python and TensorFlow AI/ML models into simulation systems for failure prediction.</li>
-                <li>Pioneered DevOps adoption by automating Jenkins and Docker CI/CD pipelines.</li>
+            <ul style="list-style: square; padding-left: 20px; color: #475569;">
+                <li>Directed delivery of <strong>€2.4M toolchain platform</strong> managing 70+ engineers.</li>
+                <li>Integrated AI/ML models into simulation systems for failure prediction.</li>
+                <li>Pioneered DevOps adoption with automated Jenkins and Docker CI/CD.</li>
             </ul>
         </div>
 
-        <div class="job" style="margin-top: 30px;">
-            <div class="job-header">
-                <span class="job-title">Software Engineer</span>
-                <span class="job-date">September 2012 – May 2015</span>
+        <div class="experience-item">
+            <div class="job-title">Software Engineer</div>
+            <div class="company-meta">
+                <span class="company-name">MathWorks India</span>
+                <span class="job-duration">2012 – 2015</span>
             </div>
-            <span class="job-company">MathWorks India</span>
-            <ul>
-                <li>Pioneered <strong>Simulink</strong> feature development using MATLAB, boosting global engineering capacity.</li>
-                <li>Spearheaded engineering team setup, accelerating hiring efficiency by 40%.</li>
+            <ul style="list-style: square; padding-left: 20px; color: #475569;">
+                <li>Pioneered Simulink feature development using MATLAB.</li>
+                <li>Accelerated hiring efficiency by 40% for global engineering teams.</li>
             </ul>
         </div>
-
-        <div class="job" style="margin-top: 30px;">
-            <div class="job-header">
-                <span class="job-title">Software Engineer</span>
-                <span class="job-date">July 2008 – August 2010</span>
+        
+        <div class="experience-item" style="border-left-color: transparent;">
+            <div class="job-title">Software Engineer</div>
+            <div class="company-meta">
+                <span class="company-name">Oracle India</span>
+                <span class="job-duration">2008 – 2010</span>
             </div>
-            <span class="job-company">Oracle India</span>
-            <ul>
-                <li>Developed SQL validation tools and optimized systems using <strong>Oracle PL/SQL</strong>.</li>
-                <li>Spearheaded deployment of Peoplesoft ERP tools, contributing to <strong>$10M revenue growth</strong>.</li>
+            <ul style="list-style: square; padding-left: 20px; color: #475569;">
+                <li>Contributed to <strong>$10M revenue growth</strong> through Peoplesoft ERP deployments.</li>
             </ul>
         </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="edu-item">
-            <strong>MBA (PGPEM) in Strategy, Leadership & Finance</strong><br>
-            IIM Bangalore | 2020 – 2022
-        </div>
-        <div class="edu-item">
-            <strong>MS in Control Systems, Automation & Robotics</strong><br>
-            École Centrale de Nantes, France | 2010 – 2012
-        </div>
-        <div class="edu-item">
-            <strong>BTech in Instrumentation & Electronics Engineering</strong><br>
-            IIT Kharagpur | 2004 – 2008
-        </div>
-    </section>
+    <div class="grid-2">
+        <section id="education">
+            <h2>Academic Foundation</h2>
+            <div class="edu-item">
+                <strong>MBA (PGPEM)</strong>
+                <div class="edu-meta">IIM Bangalore | Strategy & Finance | 2022</div>
+            </div>
+            <div class="edu-item">
+                <strong>MS in Control Systems & Robotics</strong>
+                <div class="edu-meta">École Centrale de Nantes, France | 2012</div>
+            </div>
+            <div class="edu-item">
+                <strong>BTech in Engineering</strong>
+                <div class="edu-meta">IIT Kharagpur | 2008</div>
+            </div>
+        </section>
 
-    <section id="certs-langs">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-            <div>
-                <h2>Certifications</h2>
-                <div class="cert-list">
-                    <span class="cert-item">AWS Certified Solutions Architect</span>
-                    <span class="cert-item">Certified Scrum Product Owner (CSPO)</span>
-                    <span class="cert-item">MATLAB Associate</span>
-                </div>
+        <section id="more">
+            <h2>Certifications & Languages</h2>
+            <div class="tags" style="margin-bottom: 20px;">
+                <span class="tag" style="background: #eff6ff; border-color: #dbeafe;">AWS Solutions Architect</span>
+                <span class="tag" style="background: #eff6ff; border-color: #dbeafe;">Scrum Product Owner (CSPO)</span>
             </div>
-            <div>
-                <h2>Languages</h2>
-                <ul style="display: flex; flex-wrap: wrap; gap: 15px;">
-                    <li style="padding-left: 0; background: #f0f0f0; padding: 5px 10px; border-radius: 4px;">English (Fluent)</li>
-                    <li style="padding-left: 0; background: #f0f0f0; padding: 5px 10px; border-radius: 4px;">Hindi (Native)</li>
-                    <li style="padding-left: 0; background: #f0f0f0; padding: 5px 10px; border-radius: 4px;">German (A2)</li>
-                    <li style="padding-left: 0; background: #f0f0f0; padding: 5px 10px; border-radius: 4px;">French (Intermediate)</li>
-                </ul>
+            <div style="font-size: 0.9rem; color: #64748b;">
+                <strong>English</strong> (Fluent) • <strong>Hindi</strong> (Native) • <strong>French</strong> (Inter) • <strong>German</strong> (A2)
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Abhishek Poddar. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
-ench (Intermediate)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-</div>
-
-<footer>
-    <p>&copy; 2026 Abhishek Poddar. All rights reserved.</p>
+    <p>&copy; 2026 Abhishek Poddar • Built for modern delivery</p>
 </footer>
 
 </body>
