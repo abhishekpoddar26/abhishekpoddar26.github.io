@@ -34,19 +34,19 @@
 
         /* Auto-enlarging Carousel (Circular Motion) */
         .carousel-outer { overflow: hidden; padding: 40px 0; }
-        .carousel-track { display: flex; gap: 30px; animation: scroll 20s linear infinite; width: calc(300px * 8 + 30px * 8); }
-        .carousel-item { flex-shrink: 0; width: 300px; height: 300px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, filter 0.3s; cursor: pointer; }
+        .carousel-track { display: flex; gap: 30px; animation: scroll 20s linear infinite; width: calc(300px * 10 + 30px * 10); }
+        .carousel-item { flex-shrink: 0; width: 300px; height: 300px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, filter 0.3s; cursor: pointer; background: #000; }
         .carousel-item:hover { transform: scale(1.1); z-index: 10; filter: brightness(1.1); }
-        .carousel-item img { width: 100%; height: 100%; object-fit: cover; }
+        .carousel-item img { width: 100%; height: 100%; object-fit: contain; }
 
         @keyframes scroll {
             0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-300px * 4 - 30px * 4)); }
+            100% { transform: translateX(calc(-300px * 5 - 30px * 5)); }
         }
 
         /* Lightbox (Enlarge on Click) */
         .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center; cursor: zoom-out; }
-        .lightbox img { max-width: 90% ; max-height: 90% ; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.3s ease; }
+        .lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.3s ease; }
         .lightbox.active { display: flex; }
         .lightbox.active img { transform: scale(1); }
 
@@ -80,16 +80,18 @@
         <h2>Interactive Gallery</h2>
         <div class="carousel-outer">
             <div class="carousel-track" id="gallery-track">
-                <!-- Repeated set for seamless loop -->
-                <div class="carousel-item" onclick="openLightbox(this)"><img src="Abhishek_Poddar_Pic.jpg" alt="Photo 1"></div>
-                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic_Abhishek Poddar.jpg" alt="Photo 2"></div>
-                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic7.jpeg" alt="Photo 3"></div>
-                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic8.jpeg" alt="Photo 4"></div>
-                <!-- Loop repeats -->
-                <div class="carousel-item" onclick="openLightbox(this)"><img src="Abhishek_Poddar_Pic.jpg" alt="Photo 1"></div>
-                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic_Abhishek Poddar.jpg" alt="Photo 2"></div>
-                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic7.jpeg" alt="Photo 3"></div>
-                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic8.jpeg" alt="Photo 4"></div>
+                <!-- Set of 5 photos -->
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic_Abhishek Poddar.jpg" alt="Photo 1"></div>
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic7.jpeg" alt="Photo 2"></div>
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic8.jpeg" alt="Photo 3"></div>
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic9.jpeg" alt="Photo 4"></div>
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic10.jpeg" alt="Photo 5"></div>
+                <!-- Loop repeats for seamless animation -->
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic_Abhishek Poddar.jpg" alt="Photo 1"></div>
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic7.jpeg" alt="Photo 2"></div>
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic8.jpeg" alt="Photo 3"></div>
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic9.jpeg" alt="Photo 4"></div>
+                <div class="carousel-item" onclick="openLightbox(this)"><img src="Pic10.jpeg" alt="Photo 5"></div>
             </div>
         </div>
     </section>
