@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Abhishek Poddar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #2563eb;
+            --accent-color: #38bdf8;
+            --text-color: #1e293b;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-color); background-color: #f1f5f9; padding-bottom: 80px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
+
+        nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0; }
+        .nav-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .nav-link { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; padding: 5px 10px; border-radius: 6px; }
+        .nav-link:hover, .nav-link.active { color: white; background: rgba(255,255,255,0.1); }
+
+        header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 60px 0 100px 0; margin-bottom: -60px; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); text-align: center; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; }
+
+        section { background: var(--white); padding: 50px; margin-bottom: 30px; border-radius: 20px; box-shadow: var(--shadow-md); border: 1px solid rgba(226, 232, 240, 0.8); }
+        h2 { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 30px; display: flex; align-items: center; gap: 12px; font-weight: 700; }
+        h2::after { content: ''; flex-grow: 1; height: 1px; background: #e2e8f0; }
+
+        .experience-item { margin-bottom: 40px; padding-left: 20px; border-left: 3px solid #e2e8f0; position: relative; }
+        .experience-item::before { content: ''; position: absolute; left: -8px; top: 5px; width: 13px; height: 13px; background: var(--white); border: 3px solid var(--secondary-color); border-radius: 50%; }
+        .job-title { font-weight: 700; color: var(--primary-color); font-size: 1.15rem; }
+        .company-meta { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; }
+        .company-name { color: var(--secondary-color); font-weight: 600; }
+        .job-duration { color: #64748b; font-weight: 500; }
+
+        footer { text-align: center; padding-top: 40px; color: #64748b; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container nav-container">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="experience.html" class="nav-link active">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="photos.html" class="nav-link">Photos</a>
+        <a href="contact.html" class="nav-link">Contact Me</a>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Professional Journey</h1>
+        <p style="color: #94a3b8;">Strategic Leadership & Technical Innovation</p>
+    </div>
+</header>
+
+<div class="container" style="position: relative; z-index: 10;">
+    <section>
+        <h2>Experience</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Software Development Manager (Technology Lead – AI & Cloud)</div>
+            <div class="company-meta">
+                <span class="company-name">Trianz Digital Consulting</span>
+                <span class="job-duration">July 2022 – Present</span>
+            </div>
+            <ul style="list-style: square; padding-left: 20px; color: #475569;">
+                <li>Spearheaded end-to-end delivery and client engagement for cloud and data transformation programs, generating <strong>$4M+ revenue</strong> leveraging AWS and Agile methodologies.</li>
+                <li>Collaborated with AWS leadership to co-develop AppFlow, Athena, and QuickSight connectors, enabling scalable ETL pipelines and advanced analytics using Python.</li>
+                <li>Architected multi-cloud migration platform with AWS, Azure, and GCP via Concierto Migrate, accelerating enterprise modernization by 80%.</li>
+                <li>Directed global engineering team of 40+ across DevOps, architecture, and development, accelerating agile delivery and fostering cross-functional collaboration.</li>
+                <li>Enabled AI-driven automation via agentic workflows and LLM orchestration using Python and Docker.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Technical Program Manager</div>
+            <div class="company-meta">
+                <span class="company-name">Mercedes-Benz R&D India</span>
+                <span class="job-duration">May 2015 – June 2022</span>
+            </div>
+            <ul style="list-style: square; padding-left: 20px; color: #475569;">
+                <li>Directed delivery of <strong>€2.4M toolchain platform</strong> managing 60+ modules and coordinating 70+ engineers across global teams driving sustained revenue growth.</li>
+                <li>Integrated Python and TensorFlow AI/ML models into simulation systems, optimizing algorithms to enhance failure prediction accuracy and improve system reliability.</li>
+                <li>Pioneered DevOps adoption by automating Jenkins and Docker CI/CD pipelines, accelerating deployment velocity and boosting global engineering efficiency.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Software Engineer</div>
+            <div class="company-meta">
+                <span class="company-name">MathWorks India</span>
+                <span class="job-duration">September 2012 – May 2015</span>
+            </div>
+            <ul style="list-style: square; padding-left: 20px; color: #475569;">
+                <li>Pioneered Simulink feature development using MATLAB, boosting global engineering capacity and mentoring junior engineers with Agile practices to enhance team expertise.</li>
+                <li>Spearheaded engineering team setup by onboarding top talent from IITs and US, optimizing technical interviews and candidate selection, accelerating hiring efficiency by 40% and enhancing team quality.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item" style="border-left-color: transparent;">
+            <div class="job-title">Software Engineer</div>
+            <div class="company-meta">
+                <span class="company-name">Oracle India</span>
+                <span class="job-duration">July 2008 – August 2010</span>
+            </div>
+            <ul style="list-style: square; padding-left: 20px; color: #475569;">
+                <li>Developed SQL validation tools and optimized enterprise systems using Oracle PL/SQL, enhancing data accuracy and boosting system reliability for large-scale clients.</li>
+                <li>Spearheaded deployment of Peoplesoft ERP tools at Oracle India, contributing to <strong>$10M revenue growth</strong> while enhancing platform stability.</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Abhishek Poddar • Built for modern delivery</p>
+</footer>
+
+</body>
+</html>

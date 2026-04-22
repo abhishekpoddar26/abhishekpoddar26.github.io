@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Abhishek Poddar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #2563eb;
+            --accent-color: #38bdf8;
+            --text-color: #1e293b;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-color); background-color: #f1f5f9; padding-bottom: 80px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
+
+        nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0; }
+        .nav-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .nav-link { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; padding: 5px 10px; border-radius: 6px; }
+        .nav-link:hover, .nav-link.active { color: white; background: rgba(255,255,255,0.1); }
+
+        header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 60px 0 100px 0; margin-bottom: -60px; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); text-align: center; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; }
+
+        section { background: var(--white); padding: 50px; margin-bottom: 30px; border-radius: 20px; box-shadow: var(--shadow-md); border: 1px solid rgba(226, 232, 240, 0.8); }
+        h2 { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 30px; display: flex; align-items: center; gap: 12px; font-weight: 700; }
+        h2::after { content: ''; flex-grow: 1; height: 1px; background: #e2e8f0; }
+
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .skill-group { margin-bottom: 30px; }
+        .skill-group strong { display: block; margin-bottom: 15px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #64748b; }
+        .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tag { background: var(--light-bg); color: var(--primary-color); padding: 8px 16px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; border: 1px solid #e2e8f0; }
+
+        footer { text-align: center; padding-top: 40px; color: #64748b; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container nav-container">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link active">Skills</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="photos.html" class="nav-link">Photos</a>
+        <a href="contact.html" class="nav-link">Contact Me</a>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Skills & Expertise</h1>
+        <p style="color: #94a3b8;">Technology, Leadership & Strategy</p>
+    </div>
+</header>
+
+<div class="container" style="position: relative; z-index: 10;">
+    <section>
+        <div class="grid-2">
+            <div>
+                <h2>Technical Expertise</h2>
+                <div class="skill-group">
+                    <strong>AI/ML & LLMs</strong>
+                    <div class="tags">
+                        <span class="tag">Generative AI</span>
+                        <span class="tag">GPT, Claude, Mistral</span>
+                        <span class="tag">LLM Orchestration</span>
+                        <span class="tag">Agentic AI Systems</span>
+                        <span class="tag">TensorFlow</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <strong>Cloud Platforms</strong>
+                    <div class="tags">
+                        <span class="tag">AWS (Athena, AppFlow, QuickSight)</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">GCP</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <strong>Architecture</strong>
+                    <div class="tags">
+                        <span class="tag">Microservices</span>
+                        <span class="tag">Distributed Systems</span>
+                        <span class="tag">Data Lake Architecture</span>
+                        <span class="tag">Cloud-Native Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Core Leadership</h2>
+                <div class="skill-group">
+                    <strong>Management</strong>
+                    <div class="tags">
+                        <span class="tag">Technical Program Management</span>
+                        <span class="tag">Stakeholder Management</span>
+                        <span class="tag">Global Team Leadership (40-70+)</span>
+                        <span class="tag">Revenue Growth Strategy</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <strong>Development & Tools</strong>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">SQL (PL/SQL)</span>
+                        <span class="tag">MATLAB / Simulink</span>
+                        <span class="tag">Docker & Kubernetes</span>
+                        <span class="tag">Agile (Jira, Confluence)</span>
+                        <span class="tag">CI/CD (Jenkins)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Abhishek Poddar • Built for modern delivery</p>
+</footer>
+
+</body>
+</html>

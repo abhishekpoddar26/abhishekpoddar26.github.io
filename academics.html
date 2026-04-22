@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | Abhishek Poddar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #2563eb;
+            --accent-color: #38bdf8;
+            --text-color: #1e293b;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text-color); background-color: #f1f5f9; padding-bottom: 80px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
+
+        nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0; }
+        .nav-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .nav-link { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; padding: 5px 10px; border-radius: 6px; }
+        .nav-link:hover, .nav-link.active { color: white; background: rgba(255,255,255,0.1); }
+
+        header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 60px 0 100px 0; margin-bottom: -60px; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); text-align: center; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; }
+
+        section { background: var(--white); padding: 50px; margin-bottom: 30px; border-radius: 20px; box-shadow: var(--shadow-md); border: 1px solid rgba(226, 232, 240, 0.8); }
+        h2 { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 30px; display: flex; align-items: center; gap: 12px; font-weight: 700; }
+        h2::after { content: ''; flex-grow: 1; height: 1px; background: #e2e8f0; }
+
+        .edu-item { margin-bottom: 30px; border-bottom: 1px solid #f1f5f9; padding-bottom: 20px; }
+        .edu-item:last-child { border-bottom: none; }
+        .edu-item strong { display: block; color: var(--primary-color); font-size: 1.1rem; }
+        .edu-meta { color: #64748b; font-size: 0.95rem; margin-top: 5px; }
+        
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .cert-item { background: #eff6ff; border: 1px solid #dbeafe; color: #1e40af; padding: 10px 15px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; }
+
+        footer { text-align: center; padding-top: 40px; color: #64748b; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container nav-container">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="academics.html" class="nav-link active">Academics</a>
+        <a href="photos.html" class="nav-link">Photos</a>
+        <a href="contact.html" class="nav-link">Contact Me</a>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Academic Foundation</h1>
+        <p style="color: #94a3b8;">Education & Professional Certifications</p>
+    </div>
+</header>
+
+<div class="container" style="position: relative; z-index: 10;">
+    <section>
+        <div class="grid-2">
+            <div>
+                <h2>Education</h2>
+                <div class="edu-item">
+                    <strong>MBA (PGPEM) in Strategy, Leadership & Finance</strong>
+                    <div class="edu-meta">IIM Bangalore | April 2020 – March 2022</div>
+                </div>
+                <div class="edu-item">
+                    <strong>MS in Control Systems, Automation & Robotics</strong>
+                    <div class="edu-meta">École Centrale de Nantes, France | October 2010 – September 2012</div>
+                </div>
+                <div class="edu-item">
+                    <strong>BTech in Instrumentation & Electronics Engineering</strong>
+                    <div class="edu-meta">IIT Kharagpur | July 2004 – June 2008</div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Certifications</h2>
+                <div class="cert-item">AWS Certified Solutions Architect – Associate</div>
+                <div class="cert-item">Certified Scrum Product Owner (CSPO)</div>
+                <div class="cert-item">MATLAB Associate</div>
+
+                <h2 style="margin-top: 40px;">Languages</h2>
+                <ul style="list-style: none; color: #475569;">
+                    <li style="margin-bottom: 8px;"><strong>English</strong> – Fluent</li>
+                    <li style="margin-bottom: 8px;"><strong>Hindi</strong> – Native</li>
+                    <li style="margin-bottom: 8px;"><strong>French</strong> – Intermediate</li>
+                    <li style="margin-bottom: 8px;"><strong>German</strong> – A2</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Abhishek Poddar • Built for modern delivery</p>
+</footer>
+
+</body>
+</html>
